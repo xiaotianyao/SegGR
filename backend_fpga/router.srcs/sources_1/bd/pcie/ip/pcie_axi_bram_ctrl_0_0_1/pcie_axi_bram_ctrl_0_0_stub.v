@@ -4,7 +4,7 @@
 // Date        : Thu Oct  8 20:16:21 2026
 // Host        : bn-ws running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
-//               /data0/tianyaox_home/workspace/routing/fpga/router_final_TODAES26/router.srcs/sources_1/bd/pcie/ip/pcie_axi_bram_ctrl_0_0_1/pcie_axi_bram_ctrl_0_0_stub.v
+//               /data0/home/workspace/routing/fpga/router_final_TODAES26/router.srcs/sources_1/bd/pcie/ip/pcie_axi_bram_ctrl_0_0_1/pcie_axi_bram_ctrl_0_0_stub.v
 // Design      : pcie_axi_bram_ctrl_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcku095-ffva1156-1-i

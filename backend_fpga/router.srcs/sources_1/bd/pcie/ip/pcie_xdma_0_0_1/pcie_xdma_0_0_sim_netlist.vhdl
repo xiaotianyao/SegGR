@@ -4,7 +4,7 @@
 -- Date        : Thu Oct  8 20:19:36 2026
 -- Host        : bn-ws running 64-bit Ubuntu 22.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               /data0/tianyaox_home/workspace/routing/fpga/router_final_TODAES26/router.srcs/sources_1/bd/pcie/ip/pcie_xdma_0_0_1/pcie_xdma_0_0_sim_netlist.vhdl
+--               /data0/home/workspace/routing/fpga/router_final_TODAES26/router.srcs/sources_1/bd/pcie/ip/pcie_xdma_0_0_1/pcie_xdma_0_0_sim_netlist.vhdl
 -- Design      : pcie_xdma_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

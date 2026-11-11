@@ -91,10 +91,6 @@ def compute_group_spans(
                 gs[1] = max(gs[1], s[1])
                 gs[2] = min(gs[2], s[2])
                 gs[3] = max(gs[3], s[3])
-    # 无候选被任何 task 引用的组(singleton fold 后它们没有 query 段)不
-    # 参与切块平衡——它们已静态化,不占窗口/帧/更新;计入会把幻影 span
-    # [0,0,0,0] 压到 cell (0,0) 上,严重歪切。未折叠流程里每个组都有
-    # query 段,此过滤是 no-op(回归不变)。
     return [groups[g] for g in sorted(groups.keys()) if g not in groups_empty]
 
 
