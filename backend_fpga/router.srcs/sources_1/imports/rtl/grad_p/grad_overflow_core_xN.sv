@@ -89,7 +89,7 @@ module grad_overflow_core_xN #(
     logic signed [COEFF_W-1:0] coeff;
   } host_cmd_t;
 
-  // p native-query prefetch (方案 B): a fetch FIFO tapped at ingress_push
+  // p native-query prefetch: a fetch FIFO tapped at ingress_push
   // feeds the pipelined p-bank arbiter; the frontend pairs each native-query
   // ingress head with the head of the response FIFO instead of issuing a
   // blocking p read (old FE_IDLE/FE_WAIT_RESP serializer, retired).

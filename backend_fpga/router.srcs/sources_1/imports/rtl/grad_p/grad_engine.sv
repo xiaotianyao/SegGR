@@ -40,7 +40,7 @@ module grad_engine #(
   localparam int SOFTMAX_AXI_BURST_ROW_SLOTS = 8 * SOFTMAX_AXI_BURST_LINES_CLAMPED,
   localparam int SOFTMAX_WRITE_FLUSH_THRESHOLD = 8 * SOFTMAX_AXI_BURST_ROW_SLOTS,
   localparam int SOFTMAX_ROW_WRITE_BUFFER_DEPTH = 2 * SOFTMAX_WRITE_FLUSH_THRESHOLD,
-  // Blocked-GRADP v2 (see fpga/router/blocked_v2_rtl_design.md §1.1):
+  // Blocked-GRADP v2 (see fpga/router/blocked_v2_rtl_design.md Chap. 1.1):
   // block-scheduled run with ping-pong grad/pwin window halves, a global
   // p window (region-base addressed) and a windowed group_flag. Only
   // meaningful together with the adapter-side BLOCKED_GRADP slot decode.
@@ -986,7 +986,7 @@ module grad_engine #(
 
   generate
     if (BLOCKED_SCHED) begin : GEN_BLOCKED_MEM
-      // v4: u_mem_p (global p window) retired — trivial p is authoritative in
+      // v4: u_mem_p (global p window) retired - trivial p is authoritative in
       // the DDR p region, cross-window p in xwin_p (below).
       // pwin: ping-pong p read cache, split into two independent 1r1w halves
       // (same pattern as the grad window): the GRADP query port and the

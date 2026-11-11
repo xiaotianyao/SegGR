@@ -1155,7 +1155,7 @@ module router_pcie_bram_adapter #(
   // The streaming play pops the fetcher head combinationally in the same
   // cycle the lanes are captured: the head data is combinational (FWFT),
   // so a registered pop would capture every head twice and fire the
-  // fetcher's `last` (pop-count based) one frame early — the closing
+  // fetcher's `last` (pop-count based) one frame early - the closing
   // frame was then never delivered and the dispatcher wedged in ST_SETW.
   assign sr_frame_pop_o =
     sr_frame_pop_q ||
@@ -1165,7 +1165,7 @@ module router_pcie_bram_adapter #(
   // BRAM write-port arbitration: the mirror drives the port only while it
   // holds a pending word (valid) AND the FSM is not writing this cycle
   // (ready); at all other times the FSM's address/data pass through
-  // untouched — including its reads (we=0), which must never see the
+  // untouched - including its reads (we=0), which must never see the
   // mirror's address (broke full_reset/command reads when the mux keyed
   // on fsm_we alone).
   assign cmd_bram_we_o =
@@ -1424,7 +1424,7 @@ module router_pcie_bram_adapter #(
           // valid/ready write handshake: the pending word (valid) is held
           // until a cycle with no FSM write (ready) carries it onto the
           // port; FSM writes always win the mux, so a pending word simply
-          // waits — it is never silently dropped.
+          // waits - it is never silently dropped.
           if (mirror_bram_we_q == '0) begin
             mirror_bram_we_q <= {BRAM_STRB_W{1'b1}};
             mirror_bram_addr_q <= bram_addr(MIRROR_BASE_INDEX + mirror_wr_idx_q);
@@ -1608,7 +1608,7 @@ module router_pcie_bram_adapter #(
         end
 
         // V2: a need_static lane record advanced as a plain (unsubstituted)
-        // command — the head decode and the transfer must always agree
+        // command - the head decode and the transfer must always agree
         if (
           !prb_v2_sticky_q && iss_s2_adv_s[core_idx] &&
           !iss_s2_need_static_q[core_idx] &&

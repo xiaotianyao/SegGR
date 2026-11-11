@@ -2,7 +2,7 @@
 `define FPGA_BLOCKED_CTRL_SV
 
 // Blocked-GRADP v2 block controller. See fpga/router/blocked_v2_rtl_design.md
-// (§1.2) and routing/plan_blocked_v2.md for the architecture contract.
+// (Chap. 1.2) and routing/plan_blocked_v2.md for the architecture contract.
 //
 // Owns per-iteration block orchestration:
 //   ctrl lane BRAM (per-block refill/spill lanes, streamed by the adapter
@@ -334,11 +334,9 @@ module blocked_ctrl #(
   // Descriptor register file (host init). 11-bit word address map
   // (P_REGIONS = 64; host constants in verif/router_host.py
   // BLOCKED_V2_DESC_* must match this map exactly):
-  //   11'h000-11'h1FF  real_cnt[{block,bank}]        (17b, v4: 原 global p
-  //                    region_base 随 u_mem_p 退役,此空间改作 real 行数)
+  //   11'h000-11'h1FF  real_cnt[{block,bank}]        (17b)
   //   11'h200-11'h3FF  n_b[{block,bank}]             (17b)
-  //   11'h400          block_count (actual blocks N, 1..P_REGIONS; 0 = P_REGIONS;
-  //                    v4 起迁址于此:原 carry_blk_base 随 packed 寻址彻底退役)
+  //   11'h400          block_count (actual blocks N, 1..P_REGIONS; 0 = P_REGIONS)
   //   11'h440-11'h47F  seg_logits_base[block]        (32b)
   //   11'h480-11'h4BF  seg_rms_base[block]           (32b)
   //   11'h4C0-11'h4FF  seg_meta_base[block]          (32b)
@@ -360,7 +358,7 @@ module blocked_ctrl #(
   logic [31:0] desc_xwin_base_q [0:P_REGIONS*BANK_COUNT-1];
   logic [BLK_IDX_W:0] desc_block_count_q;
 
-  // NOTE: no reset on this block by design — the host writes the descriptor
+  // NOTE: no reset on this block by design - the host writes the descriptor
   // image (including the block count word) via CMD_LOAD_BLOCK_DESC while the
   // system reset hold keeps rst_n low; gating the writes with rst_n would
   // drop them. The engine is held in the same reset until after the image

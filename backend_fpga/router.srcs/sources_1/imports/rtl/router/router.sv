@@ -1322,7 +1322,7 @@ module router #(
   // half-expanded in the issuer (iss_active_q) must NOT block the grant:
   // its remaining ARs are already gated on the pipe draining, so requiring
   // !iss_active_q here would deadlock (read waits for pipe, pipe waits for
-  // issuer). Read delivery may still be running — its data is already
+  // issuer). Read delivery may still be running - its data is already
   // on-chip, so write bursts safely overlap read response delivery.
   assign bridge_choose_write_s =
     ddr_init_done_q &&
@@ -1338,7 +1338,7 @@ module router #(
   assign ddr_rd_req_ready_s =
     ddr_init_done_q && (brq_level_q < BRIDGE_RD_FIFO_CNT_W'(BRIDGE_RD_FIFO_DEPTH));
 
-  // NET-on-DDR raw fetch: lowest-priority read — enqueue only when the read
+  // NET-on-DDR raw fetch: lowest-priority read - enqueue only when the read
   // FIFO is empty, no engine read is pending and no write batch waits
   // (same conditions as the old bridge_choose_fetch_s).
   assign fr_req_ready_s =

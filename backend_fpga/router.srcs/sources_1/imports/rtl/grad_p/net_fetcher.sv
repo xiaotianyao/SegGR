@@ -98,7 +98,7 @@ module net_fetcher #(
   // table (ordinal order; slot s is active iff net_words[s] != 0).
   // The compaction runs SERIALLY (one slot per cycle in F_DIR_COMPACT):
   // a single-cycle combinational compaction costs O(BLOCK_SLOTS^2) mux
-  // cells (~4.5M at 64 slots — killed the build), while the serial walk is
+  // cells (~4.5M at 64 slots - killed the build), while the serial walk is
   // ~free and its latency is paid once per GO.
   // ---------------------------------------------------------------------
   logic [31:0] dir_q [0:(BLOCK_SLOTS * 4) - 1];
