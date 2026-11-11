@@ -1,0 +1,60 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port rst_bram_i -pg 1 -y 140 -defaultsOSRD
+preplace port rstn_pcie_i -pg 1 -y 160 -defaultsOSRD
+preplace port pcie_7x_mgt_rtl -pg 1 -y 80 -defaultsOSRD
+preplace port clk_axi_o -pg 1 -y 20 -defaultsOSRD
+preplace port clk_sys_i -pg 1 -y 80 -defaultsOSRD
+preplace port clk_pcie_i -pg 1 -y 60 -defaultsOSRD
+preplace port clk_sys_buf_o -pg 1 -y 40 -defaultsOSRD
+preplace port user_rstn_o -pg 1 -y 140 -defaultsOSRD
+preplace port usr_irq_req -pg 1 -y 180 -defaultsOSRD
+preplace port en_bram_i -pg 1 -y 120 -defaultsOSRD
+preplace port user_lnk_up_o -pg 1 -y 120 -defaultsOSRD
+preplace port clk_bram_i -pg 1 -y 40 -defaultsOSRD
+preplace portBus addr_bram_i -pg 1 -y 20 -defaultsOSRD
+preplace portBus dout_bram_o -pg 1 -y 60 -defaultsOSRD
+preplace portBus peripheral_aresetn_o -pg 1 -y 100 -defaultsOSRD
+preplace portBus din_bram_i -pg 1 -y 100 -defaultsOSRD
+preplace portBus usr_irq_ack -pg 1 -y 160 -defaultsOSRD
+preplace portBus we_bram_i -pg 1 -y 200 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -y 330 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -y 230 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 1150 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 1 -y 780 -defaultsOSRD
+preplace inst util_ds_buf -pg 1 -lvl 1 -y 1320 -defaultsOSRD
+preplace inst xdma_0 -pg 1 -lvl 1 -y 1530 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -y 520 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 980 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 1 -y 80 -defaultsOSRD
+preplace netloc xlconstant_1_dout 1 0 2 150 1050 540
+preplace netloc xdma_0_usr_irq_ack 1 1 2 620 160 NJ
+preplace netloc din_bram_i_1 1 0 1 70J
+preplace netloc CLK_IN1_D_0_1 1 0 1 40J
+preplace netloc util_ds_buf_IBUF_OUT 1 0 2 130 1250 510
+preplace netloc util_ds_buf_IBUF_DS_ODIV2 1 0 2 150 1390 510
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 0 2 110 160 510
+preplace netloc xdma_0_user_lnk_up 1 1 2 590 120 NJ
+preplace netloc xdma_0_axi_aclk 1 0 3 140 400 610 170 660
+preplace netloc rst_bram_i_1 1 0 1 30J
+preplace netloc diff_clock_rtl_0_1 1 0 1 50J
+preplace netloc xdma_0_axi_aresetn 1 0 3 150 390 600 140 N
+preplace netloc we_bram_i_1 1 0 1 20J
+preplace netloc usr_irq_req_1 1 0 1 0J
+preplace netloc en_bram_i_1 1 0 1 60J
+preplace netloc xlconstant_0_dout 1 0 2 140 1040 520J
+preplace netloc clk_wiz_0_clk_out1 1 1 2 550J 40 N
+preplace netloc addr_bram_i_1 1 0 1 90J
+preplace netloc xdma_0_M_AXI 1 0 2 130 920 530
+preplace netloc axi_interconnect_0_M00_AXI 1 0 2 100 640 510
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 2 580J 100 N
+preplace netloc xdma_0_pcie_mgt 1 1 2 570 80 NJ
+preplace netloc blk_mem_gen_0_doutb 1 0 3 120 170 560J 60 NJ
+preplace netloc Net 1 0 1 10J
+preplace netloc clk_bram_i_1 1 0 1 80J
+levelinfo -pg 1 -20 330 640 720 -top 0 -bot 1670
+",
+}
+0
